@@ -46,12 +46,13 @@ namespace CheckersGame
             int.TryParse(rowComboBox.Text, out int comboBoxRow);
             int.TryParse(columnComboBox.Text, out int comboBoxColumn);
             bool grayPiece = true; //figure this out
-            bool king = false; //figure this out
+            Button button = (Button) sender;
+            bool kingPiece = button.Text == "king"; //figure this out
             //regular jump
             if ((grayPiece && comboBoxRow == rowClicked + 1) || //gray piece
             (!grayPiece && comboBoxRow == rowClicked - 1) || //white piece
-            (king && comboBoxRow == rowClicked + 1 || //white king
-            king && comboBoxRow == rowClicked - 1)) //gray king
+            (kingPiece && comboBoxRow == rowClicked + 1 || //white king
+            kingPiece && comboBoxRow == rowClicked - 1)) //gray king
             {
                 if (comboBoxColumn == columnClicked + 1 || comboBoxColumn == columnClicked - 1)
                 {
@@ -59,6 +60,11 @@ namespace CheckersGame
                     {
                         errorMessage.Text = "";
                         validEntry = true;
+                        if(comboBoxRow == 0 || comboBoxRow == 8)
+                        {
+                            button.Text = "king";
+                            kingPiece = true;
+                        }
                         this.Close();
                     }
                     else
@@ -73,7 +79,7 @@ namespace CheckersGame
             }
             //capturing a piece moving forward
             else if ((grayPiece && comboBoxRow == rowClicked + 2) || //gray piece
-                 (king && comboBoxRow == rowClicked + 2)) //white king
+                 (kingPiece && comboBoxRow == rowClicked + 2)) //white king
             {
                 Button middleSquare = (comboBoxColumn == columnClicked + 2) ? board[comboBoxRow, comboBoxColumn] :
                     (comboBoxColumn == columnClicked - 2) ? board[comboBoxRow, comboBoxColumn - 2] : null;
@@ -95,7 +101,7 @@ namespace CheckersGame
             }
             //capturing a piece moving backwards
             else if ((!grayPiece && comboBoxRow == rowClicked - 2) || //white piece
-            (king && comboBoxRow == rowClicked - 2)) //gray king
+            (kingPiece && comboBoxRow == rowClicked - 2)) //gray king
             {
                 Button middleSquare = (comboBoxColumn == columnClicked + 2) ? board[comboBoxRow -2, comboBoxColumn] :
                     (comboBoxColumn == columnClicked - 2) ? board[comboBoxRow -2, comboBoxColumn - 2] : null;

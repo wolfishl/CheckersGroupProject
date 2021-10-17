@@ -40,3 +40,14 @@ C:\Users\hrose\Downloads\CheckersGame-movingPiece\CheckersGame-movingPiece\obj\D
 C:\Users\hrose\Downloads\CheckersGame-movingPiece\CheckersGame-movingPiece\obj\Debug\CheckersGame.csproj.CoreCompileInputs.cache
 C:\Users\hrose\Downloads\CheckersGame-movingPiece\CheckersGame-movingPiece\obj\Debug\CheckersGame.exe
 C:\Users\hrose\Downloads\CheckersGame-movingPiece\CheckersGame-movingPiece\obj\Debug\CheckersGame.pdb
+C:\Users\elian\Source\Repos\CheckersGroupProject\bin\Debug\CheckersGame.exe.config
+C:\Users\elian\Source\Repos\CheckersGroupProject\bin\Debug\CheckersGame.exe
+C:\Users\elian\Source\Repos\CheckersGroupProject\bin\Debug\CheckersGame.pdb
+C:\Users\elian\Source\Repos\CheckersGroupProject\obj\Debug\CheckersGame.csprojAssemblyReference.cache
+C:\Users\elian\Source\Repos\CheckersGroupProject\obj\Debug\CheckersGame.Form1.resources
+C:\Users\elian\Source\Repos\CheckersGroupProject\obj\Debug\CheckersGame.Form2.resources
+C:\Users\elian\Source\Repos\CheckersGroupProject\obj\Debug\CheckersGame.Properties.Resources.resources
+C:\Users\elian\Source\Repos\CheckersGroupProject\obj\Debug\CheckersGame.csproj.GenerateResource.cache
+C:\Users\elian\Source\Repos\CheckersGroupProject\obj\Debug\CheckersGame.csproj.CoreCompileInputs.cache
+C:\Users\elian\Source\Repos\CheckersGroupProject\obj\Debug\CheckersGame.exe
+C:\Users\elian\Source\Repos\CheckersGroupProject\obj\Debug\CheckersGame.pdb
