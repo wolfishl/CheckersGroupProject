@@ -39,7 +39,6 @@ namespace CheckersGame
         //TODO: 
         //add conditions for jumping over
         //add code to determine the color of a piece
-        //add code to determine if the piece is a king
         //add code to support double jumps
         private void ok_Click(object sender, EventArgs e)
         {
@@ -47,7 +46,7 @@ namespace CheckersGame
             int.TryParse(columnComboBox.Text, out int comboBoxColumn);
             bool grayPiece = true; //figure this out
             Button button = (Button) sender;
-            bool kingPiece = button.Text == "king"; //figure this out
+            bool kingPiece = button.Text == "king";
             //regular jump
             if ((grayPiece && comboBoxRow == rowClicked + 1) || //gray piece
             (!grayPiece && comboBoxRow == rowClicked - 1) || //white piece
@@ -63,7 +62,6 @@ namespace CheckersGame
                         if(comboBoxRow == 0 || comboBoxRow == 8)
                         {
                             button.Text = "king";
-                            kingPiece = true;
                         }
                         this.Close();
                     }
