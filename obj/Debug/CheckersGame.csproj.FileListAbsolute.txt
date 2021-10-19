@@ -40,3 +40,14 @@ C:\Users\hrose\Downloads\CheckersGame-movingPiece\CheckersGame-movingPiece\obj\D
 C:\Users\hrose\Downloads\CheckersGame-movingPiece\CheckersGame-movingPiece\obj\Debug\CheckersGame.csproj.CoreCompileInputs.cache
 C:\Users\hrose\Downloads\CheckersGame-movingPiece\CheckersGame-movingPiece\obj\Debug\CheckersGame.exe
 C:\Users\hrose\Downloads\CheckersGame-movingPiece\CheckersGame-movingPiece\obj\Debug\CheckersGame.pdb
+C:\Users\hrose\Desktop\Checkers_GroupProject\bin\Debug\CheckersGame.exe.config
+C:\Users\hrose\Desktop\Checkers_GroupProject\bin\Debug\CheckersGame.exe
+C:\Users\hrose\Desktop\Checkers_GroupProject\bin\Debug\CheckersGame.pdb
+C:\Users\hrose\Desktop\Checkers_GroupProject\obj\Debug\CheckersGame.Form1.resources
+C:\Users\hrose\Desktop\Checkers_GroupProject\obj\Debug\CheckersGame.Form2.resources
+C:\Users\hrose\Desktop\Checkers_GroupProject\obj\Debug\CheckersGame.Properties.Resources.resources
+C:\Users\hrose\Desktop\Checkers_GroupProject\obj\Debug\CheckersGame.csproj.GenerateResource.cache
+C:\Users\hrose\Desktop\Checkers_GroupProject\obj\Debug\CheckersGame.csproj.CoreCompileInputs.cache
+C:\Users\hrose\Desktop\Checkers_GroupProject\obj\Debug\CheckersGame.exe
+C:\Users\hrose\Desktop\Checkers_GroupProject\obj\Debug\CheckersGame.pdb
+C:\Users\hrose\Desktop\Checkers_GroupProject\obj\Debug\CheckersGame.csprojAssemblyReference.cache

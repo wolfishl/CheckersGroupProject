@@ -37,7 +37,7 @@ namespace CheckersGame
         {
             Button btn = (Button)sender;
             //this line doesn't work
-            bool blackTeam = btn.BackgroundImage == (System.Drawing.Image)(resources.GetObject("square2.BackgroundImage"))? true : false;
+            bool grayTeam = btn.BackgroundImage.ToString().Contains("Gray"); 
             var name = btn.Name;
             if (btn.BackgroundImage != null)
             {
@@ -67,7 +67,7 @@ namespace CheckersGame
                     {
                         int row = testDialog.getComboBoxRow() - 1;
                         int column = testDialog.getComboBoxColumn() - 1;
-                        MovePiece(board[row, column], blackTeam, btn);
+                        MovePiece(board[row, column], grayTeam, btn);
                     }
                 }
                  
@@ -408,6 +408,11 @@ namespace CheckersGame
         private void square64_Click(object sender, EventArgs e)
         {
             MovingOnClick(sender);
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 }
