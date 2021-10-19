@@ -83,6 +83,16 @@ namespace CheckersGame.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap checkerNone {
+            get {
+                object obj = ResourceManager.GetObject("checkerNone", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap checkerWhite {
             get {
                 object obj = ResourceManager.GetObject("checkerWhite", resourceCulture);

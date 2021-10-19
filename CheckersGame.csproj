@@ -101,5 +101,8 @@
   <ItemGroup>
     <None Include="Resources\checkerGrayKing.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\checkerNone.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

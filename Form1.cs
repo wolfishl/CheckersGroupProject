@@ -36,8 +36,7 @@ namespace CheckersGame
         public void MovingOnClick(object sender)
         {
             Button btn = (Button)sender;
-            //this line doesn't work
-            bool grayTeam = btn.BackgroundImage.ToString().Contains("Gray"); 
+            bool grayTeam = btn.BackgroundImage.ToString().Contains("Gray") ? true : false; 
             var name = btn.Name;
             if (btn.BackgroundImage != null)
             {
@@ -56,21 +55,20 @@ namespace CheckersGame
                     }
                     if (found) break;
                 }
-
-                Form2 testDialog = new Form2(x + 1, y + 1, board);
-                testDialog.ShowDialog();
-                bool valid = false;
-                while(!valid)
-                {
-                    valid = testDialog.getValidEntry();
-                    if(valid)
-                    {
-                        int row = testDialog.getComboBoxRow() - 1;
-                        int column = testDialog.getComboBoxColumn() - 1;
-                        MovePiece(board[row, column], grayTeam, btn);
-                    }
-                }
-                 
+                moveGroupBox.Visible = true; 
+                //Form2 testDialog = new Form2(x + 1, y + 1, board);
+                //testDialog.ShowDialog();
+                //bool valid = false;
+                //while(!valid)
+                //{
+                //    valid = testDialog.getValidEntry();
+                //    if(valid)
+                //    {
+                //        int row = testDialog.getComboBoxRow() - 1;
+                //        int column = testDialog.getComboBoxColumn() - 1;
+                //        MovePiece(board[row, column], grayTeam, btn);
+                //    }
+                //
             }
     
         }
@@ -413,6 +411,16 @@ namespace CheckersGame
         private void groupBox1_Enter(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnMoveChecker_Click(object sender, EventArgs e)
+        {
+            moveGroupBox.Visible = false; 
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            moveGroupBox.Visible = false; 
         }
     }
 }

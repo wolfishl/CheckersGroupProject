@@ -46,7 +46,7 @@ namespace CheckersGame
             int.TryParse(rowComboBox.Text, out int comboBoxRow);
             int.TryParse(columnComboBox.Text, out int comboBoxColumn);
             Button btn = (Button)sender;
-            bool grayPiece = btn.BackgroundImage.ToString().Contains("Gray"); 
+            bool grayPiece = btn.BackgroundImage.ToString().Contains("Gray") ? true : false; 
             bool king = false; //figure this out
             //regular jump
             if ((grayPiece && comboBoxRow == rowClicked + 1) || //gray piece
