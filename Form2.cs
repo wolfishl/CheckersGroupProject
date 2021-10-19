@@ -38,8 +38,6 @@ namespace CheckersGame
 
         //TODO: 
         //add conditions for jumping over
-        //add code to determine the color of a piece - done
-        //add code to determine if the piece is a king
         //add code to support double jumps
         private void ok_Click(object sender, EventArgs e)
         {
@@ -47,12 +45,12 @@ namespace CheckersGame
             int.TryParse(columnComboBox.Text, out int comboBoxColumn);
             Button btn = (Button)sender;
             bool grayPiece = btn.BackgroundImage.ToString().Contains("Gray") ? true : false; 
-            bool king = false; //figure this out
+            bool kingPiece = btn.Text == "king";
             //regular jump
             if ((grayPiece && comboBoxRow == rowClicked + 1) || //gray piece
             (!grayPiece && comboBoxRow == rowClicked - 1) || //white piece
-            (king && comboBoxRow == rowClicked + 1 || //white king
-            king && comboBoxRow == rowClicked - 1)) //gray king
+            (kingPiece && comboBoxRow == rowClicked + 1 || //white king
+            kingPiece && comboBoxRow == rowClicked - 1)) //gray king
             {
                 if (comboBoxColumn == columnClicked + 1 || comboBoxColumn == columnClicked - 1)
                 {
@@ -74,7 +72,7 @@ namespace CheckersGame
             }
             //capturing a piece moving forward
             else if ((grayPiece && comboBoxRow == rowClicked + 2) || //gray piece
-                 (king && comboBoxRow == rowClicked + 2)) //white king
+                 (kingPiece && comboBoxRow == rowClicked + 2)) //white king
             {
                 Button middleSquare = (comboBoxColumn == columnClicked + 2) ? board[comboBoxRow, comboBoxColumn] :
                     (comboBoxColumn == columnClicked - 2) ? board[comboBoxRow, comboBoxColumn - 2] : null;
@@ -96,7 +94,7 @@ namespace CheckersGame
             }
             //capturing a piece moving backwards
             else if ((!grayPiece && comboBoxRow == rowClicked - 2) || //white piece
-            (king && comboBoxRow == rowClicked - 2)) //gray king
+            (kingPiece && comboBoxRow == rowClicked - 2)) //gray king
             {
                 Button middleSquare = (comboBoxColumn == columnClicked + 2) ? board[comboBoxRow -2, comboBoxColumn] :
                     (comboBoxColumn == columnClicked - 2) ? board[comboBoxRow -2, comboBoxColumn - 2] : null;
