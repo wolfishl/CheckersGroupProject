@@ -1,14 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Linq;
 using System.Windows.Forms;
-using Microsoft.VisualBasic;
 
 namespace CheckersGame
 {
@@ -55,20 +46,23 @@ namespace CheckersGame
                     }
                     if (found) break;
                 }
-                moveGroupBox.Visible = true; 
-                //Form2 testDialog = new Form2(x + 1, y + 1, board);
-                //testDialog.ShowDialog();
-                //bool valid = false;
-                //while(!valid)
-                //{
-                //    valid = testDialog.getValidEntry();
-                //    if(valid)
-                //    {
-                //        int row = testDialog.getComboBoxRow() - 1;
-                //        int column = testDialog.getComboBoxColumn() - 1;
-                //        MovePiece(board[row, column], grayTeam, btn);
-                //    }
-                //
+                Form2 testDialog = new Form2(x + 1, y + 1, board);
+                testDialog.ShowDialog();
+                bool valid = false;
+                while(!valid)
+                {
+                    valid = testDialog.getValidEntry();
+                    if(valid)
+                    {
+                        int row = testDialog.getComboBoxRow() - 1;
+                        int column = testDialog.getComboBoxColumn() - 1;
+                        if((testDialog.getComboBoxRow() - 1) == 0 || (testDialog.getComboBoxColumn() - 1) == 8)
+                        {
+                            btn.Text = "king";
+                        }
+                        MovePiece(board[row, column], grayTeam, btn);
+                    }
+                }
             }
     
         }
