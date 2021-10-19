@@ -67,6 +67,10 @@ namespace CheckersGame
                     {
                         int row = testDialog.getComboBoxRow() - 1;
                         int column = testDialog.getComboBoxColumn() - 1;
+                        if((testDialog.getComboBoxRow() - 1) == 0 || (testDialog.getComboBoxColumn() - 1) == 8)
+                        {
+                            button.Text = "king";
+                        }
                         MovePiece(board[row, column], blackTeam, btn);
                     }
                 }

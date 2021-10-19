@@ -59,10 +59,6 @@ namespace CheckersGame
                     {
                         errorMessage.Text = "";
                         validEntry = true;
-                        if(comboBoxRow == 0 || comboBoxRow == 8)
-                        {
-                            button.Text = "king";
-                        }
                         this.Close();
                     }
                     else
