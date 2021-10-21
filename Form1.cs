@@ -25,55 +25,11 @@ namespace CheckersGame
             };
         }
 
-        public void InputCheckerMove(object sender)
-        {
-            Button btn = (Button)sender;
-            var grayTeam = btn.BackgroundImage.ToString().Contains("Gray");
-            // Check if square contains a piece
-            // If yes: Show the group box
-            // Else: display text that says you can't move anything from piece
-
-            if (!btn.BackgroundImage.ToString().Equals("checkerNone.png")) // Maybe will do this in initialize
-            {
-                for (var r = 0; r < boardSize; r++)
-                {
-                    for (var c = 0; c < boardSize; c++)
-                    {
-                        if (board[r, c].Name == btn.Name)
-                        {
-                            moveGroupBox.Visible = true;
-                            btn.BackColor = Color.Cyan;
-                            break;
-                        }
-                    }
-                }
-
-                // Validate row and column
-
-                //btn.BackColor = System.Drawing.Color.Cyan; 
-                }
-            }
-
-        public void MovePiece(Button button, bool grayTeam, Button origin)
-        {            
-            if (grayTeam)
-            {
-                button.BackgroundImage = Properties.Resources.checkerGray;
-            }
-            else
-            {
-                button.BackgroundImage = Properties.Resources.checkerWhite;
-            }
-            button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            origin.BackgroundImage = Properties.Resources.checkerNone;
-            moveGroupBox.Visible = false;
-            RevertColor(); 
-        }
-
+        /* OnClickMethod for each square calls InputCheckerMove */
         #region Square On Click Methods
         private void square1_Click(object sender, EventArgs e)
         {
-            InputCheckerMove(sender); 
+            InputCheckerMove(sender);
         }
 
         private void square2_Click(object sender, EventArgs e)
@@ -391,11 +347,46 @@ namespace CheckersGame
             InputCheckerMove(sender);
         }
         #endregion
-        private void GroupBox1_Enter(object sender, EventArgs e)
-        {
 
+        /* InputCheckerMove allows user to enter a move. Highlights the selected square Cyan so user
+         knows which square they are at. */
+        public void InputCheckerMove(object sender)
+        {
+            Button btn = (Button)sender;
+            var grayTeam = btn.BackgroundImage.ToString().Contains("Gray");
+            // Check if square contains a piece
+            // If yes: Show the group box
+            // Else: display text that says you can't move anything from piece
+            if (!btn.BackgroundImage.ToString().Equals("checkerNone.png")) // Maybe will do this in initialize
+            {
+                for (var r = 0; r < boardSize; r++)
+                {
+                    for (var c = 0; c < boardSize; c++)
+                    {
+                        if (board[r, c].Name == btn.Name)
+                        {
+                            moveGroupBox.Visible = true;
+                            btn.BackColor = Color.Cyan;
+                            break;
+                        }
+                    }
+                }
+                // Validate row and column
+                }
+            }
+
+        /* BtnCancel_Click reverts color of the square and the number selectors if user wants to select different square */
+        private void BtnCancel_Click(object sender, EventArgs e)
+        {
+            RevertColor();
+            selectRow.Value = 1;
+            selectColumn.Value = 1;
+            moveGroupBox.Visible = false;
         }
 
+        /* BtnMoveChecker_Click is what happens after user selects destination row and column and clicks go
+            We will need to put move validation in this method
+         */
         private void BtnMoveChecker_Click(object sender, EventArgs e)
         {
             moveGroupBox.Visible = true;
@@ -412,22 +403,33 @@ namespace CheckersGame
                 {
                     if (board[row, col].BackColor.Equals(Color.Cyan))
                     {
-                        bool grayTeam = board[row, col].BackgroundImage.ToString().Contains("Gray") ? true : false; 
-                        MovePiece(board[destRow-1, destCol-1], grayTeam, board[row, col]);
+                        bool grayTeam = board[row, col].BackgroundImage.ToString().Contains("Gray") ? true : false;
+                        MovePiece(board[destRow - 1, destCol - 1], grayTeam, board[row, col]);
                         break;
                     }
                 }
             }
         }
 
-        private void BtnCancel_Click(object sender, EventArgs e)
-        {
-            RevertColor();
-            selectRow.Value = 1;
-            selectColumn.Value = 1;
+        /* MovePiece is called by BtnMoveChecker_Click. This actually moves the pieces by changing images */
+        public void MovePiece(Button button, bool grayTeam, Button origin)
+        {            
+            if (grayTeam)
+            {
+                button.BackgroundImage = Properties.Resources.checkerGray;
+            }
+            else
+            {
+                button.BackgroundImage = Properties.Resources.checkerWhite;
+            }
+            button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            origin.BackgroundImage = Properties.Resources.checkerNone;
             moveGroupBox.Visible = false;
+            RevertColor(); 
         }
 
+        /* Revert color is a method that changes the color back to what it previously was (after a cancel or move)
+         There is a bug here that needs to be fixed. */
         private void RevertColor()
         {
             for (var r = 0; r < boardSize; r++)

@@ -623,7 +623,6 @@ namespace CheckersGame
             this.moveGroupBox.TabStop = false;
             this.moveGroupBox.Text = "Move Checker";
             this.moveGroupBox.Visible = false;
-            this.moveGroupBox.Enter += new System.EventHandler(this.GroupBox1_Enter);
             // 
             // btnCancel
             // 
