@@ -23,342 +23,93 @@ namespace CheckersGame
                 { square49, square50, square51, square52, square53, square54, square55, square56},
                 { square57, square58, square59, square60, square61, square62, square63, square64} 
             };
+            InitializeNoneCheckers();
+            InitializeGrayCheckers();
+            InitializeWhiteCheckers();
+        }
+
+        private void InitializeNoneCheckers()
+        {
+            foreach (var btn in board)
+            {
+                btn.BackgroundImage = Properties.Resources.checkerNone;
+                btn.Tag = "none"; 
+            }
+        }
+
+        private void InitializeWhiteCheckers()
+        {
+            board[5, 1].BackgroundImage = Properties.Resources.checkerWhite;
+            board[5, 3].BackgroundImage = Properties.Resources.checkerWhite;
+            board[5, 5].BackgroundImage = Properties.Resources.checkerWhite;
+            board[5, 7].BackgroundImage = Properties.Resources.checkerWhite;
+            board[6, 0].BackgroundImage = Properties.Resources.checkerWhite;
+            board[6, 2].BackgroundImage = Properties.Resources.checkerWhite;
+            board[6, 4].BackgroundImage = Properties.Resources.checkerWhite;
+            board[6, 6].BackgroundImage = Properties.Resources.checkerWhite;
+            board[7, 1].BackgroundImage = Properties.Resources.checkerWhite;
+            board[7, 3].BackgroundImage = Properties.Resources.checkerWhite;
+            board[7, 5].BackgroundImage = Properties.Resources.checkerWhite;
+            board[7, 7].BackgroundImage = Properties.Resources.checkerWhite;
+
+            board[5, 1].Tag = "white"; 
+            board[5, 3].Tag = "white";
+            board[5, 5].Tag = "white";
+            board[5, 7].Tag = "white";
+            board[6, 0].Tag = "white";
+            board[6, 2].Tag = "white";
+            board[6, 4].Tag = "white";
+            board[6, 6].Tag = "white";
+            board[7, 1].Tag = "white";
+            board[7, 3].Tag = "white";
+            board[7, 5].Tag = "white";
+            board[7, 7].Tag = "white";
+        }
+
+        private void InitializeGrayCheckers()
+        {
+            board[0, 0].BackgroundImage = Properties.Resources.checkerGray;
+            board[0, 2].BackgroundImage = Properties.Resources.checkerGray;
+            board[0, 4].BackgroundImage = Properties.Resources.checkerGray;
+            board[0, 6].BackgroundImage = Properties.Resources.checkerGray;
+            board[1, 1].BackgroundImage = Properties.Resources.checkerGray;
+            board[1, 3].BackgroundImage = Properties.Resources.checkerGray;
+            board[1, 5].BackgroundImage = Properties.Resources.checkerGray;
+            board[1, 7].BackgroundImage = Properties.Resources.checkerGray;
+            board[2, 0].BackgroundImage = Properties.Resources.checkerGray;
+            board[2, 2].BackgroundImage = Properties.Resources.checkerGray;
+            board[2, 4].BackgroundImage = Properties.Resources.checkerGray;
+            board[2, 6].BackgroundImage = Properties.Resources.checkerGray;            
+            
+            board[0, 0].Tag = "gray";
+            board[0, 2].Tag = "gray";
+            board[0, 4].Tag = "gray";
+            board[0, 6].Tag = "gray";
+            board[1, 1].Tag = "gray";
+            board[1, 3].Tag = "gray";
+            board[1, 5].Tag = "gray";
+            board[1, 7].Tag = "gray";
+            board[2, 0].Tag = "gray";
+            board[2, 2].Tag = "gray";
+            board[2, 4].Tag = "gray";
+            board[2, 6].Tag = "gray";
         }
 
         /* OnClickMethod for each square calls InputCheckerMove */
-        #region Square On Click Methods
-        private void square1_Click(object sender, EventArgs e)
+        private void SquareOnClick(object sender, EventArgs e)
         {
             InputCheckerMove(sender);
         }
 
-        private void square2_Click(object sender, EventArgs e)
-        {
-            InputCheckerMove(sender);
-        }
-
-        private void square3_Click(object sender, EventArgs e)
-        {
-            InputCheckerMove(sender);
-        }
-
-        private void square4_Click(object sender, EventArgs e)
-        {
-            InputCheckerMove(sender);
-        }
-
-        private void square5_Click(object sender, EventArgs e)
-        {
-            InputCheckerMove(sender);
-        }
-
-        private void square6_Click(object sender, EventArgs e)
-        {
-            InputCheckerMove(sender);
-        }
-
-        private void square7_Click(object sender, EventArgs e)
-        {
-            InputCheckerMove(sender);
-        }
-
-        private void square8_Click(object sender, EventArgs e)
-        {
-            InputCheckerMove(sender);
-        }
-
-        private void square9_Click(object sender, EventArgs e)
-        {
-            InputCheckerMove(sender);
-        }
-
-        private void square10_Click(object sender, EventArgs e)
-        {
-            InputCheckerMove(sender);
-        }
-
-        private void square11_Click(object sender, EventArgs e)
-        {
-            InputCheckerMove(sender);
-        }
-
-        private void square12_Click(object sender, EventArgs e)
-        {
-            InputCheckerMove(sender);
-        }
-
-        private void square13_Click(object sender, EventArgs e)
-        {
-            InputCheckerMove(sender);
-        }
-
-        private void square14_Click(object sender, EventArgs e)
-        {
-            InputCheckerMove(sender);
-        }
-
-        private void square15_Click(object sender, EventArgs e)
-        {
-            InputCheckerMove(sender);
-        }
-
-        private void square16_Click(object sender, EventArgs e)
-        {
-            InputCheckerMove(sender);
-        }
-
-        private void square17_Click(object sender, EventArgs e)
-        {
-            InputCheckerMove(sender);
-        }
-
-        private void square18_Click(object sender, EventArgs e)
-        {
-            InputCheckerMove(sender);
-        }
-
-        private void square19_Click(object sender, EventArgs e)
-        {
-            InputCheckerMove(sender);
-        }
-
-        private void square20_Click(object sender, EventArgs e)
-        {
-            InputCheckerMove(sender);
-        }
-
-        private void square21_Click(object sender, EventArgs e)
-        {
-            InputCheckerMove(sender);
-        }
-
-        private void square22_Click(object sender, EventArgs e)
-        {
-            InputCheckerMove(sender);
-        }
-
-        private void square23_Click(object sender, EventArgs e)
-        {
-            InputCheckerMove(sender);
-        }
-
-        private void square24_Click(object sender, EventArgs e)
-        {
-            InputCheckerMove(sender);
-        }
-
-        private void square25_Click(object sender, EventArgs e)
-        {
-            InputCheckerMove(sender);
-        }
-
-        private void square26_Click(object sender, EventArgs e)
-        {
-            InputCheckerMove(sender);
-        }
-
-        private void square27_Click(object sender, EventArgs e)
-        {
-            InputCheckerMove(sender);
-        }
-
-        private void square28_Click(object sender, EventArgs e)
-        {
-            InputCheckerMove(sender);
-        }
-
-        private void square29_Click(object sender, EventArgs e)
-        {
-            InputCheckerMove(sender);
-        }
-
-        private void square30_Click(object sender, EventArgs e)
-        {
-            InputCheckerMove(sender);
-        }
-
-        private void square31_Click(object sender, EventArgs e)
-        {
-            InputCheckerMove(sender);
-        }
-
-        private void square32_Click(object sender, EventArgs e)
-        {
-            InputCheckerMove(sender);
-        }
-
-        private void square33_Click(object sender, EventArgs e)
-        {
-            InputCheckerMove(sender);
-        }
-
-        private void square34_Click(object sender, EventArgs e)
-        {
-            InputCheckerMove(sender);
-        }
-
-        private void square35_Click(object sender, EventArgs e)
-        {
-            InputCheckerMove(sender);
-        }
-
-        private void square36_Click(object sender, EventArgs e)
-        {
-            InputCheckerMove(sender);
-        }
-
-        private void square37_Click(object sender, EventArgs e)
-        {
-            InputCheckerMove(sender);
-        }
-
-        private void square38_Click(object sender, EventArgs e)
-        {
-            InputCheckerMove(sender);
-        }
-
-        private void square39_Click(object sender, EventArgs e)
-        {
-            InputCheckerMove(sender);
-        }
-
-        private void square40_Click(object sender, EventArgs e)
-        {
-            InputCheckerMove(sender);
-        }
-
-        private void square41_Click(object sender, EventArgs e)
-        {
-            InputCheckerMove(sender);
-        }
-
-        private void square42_Click(object sender, EventArgs e)
-        {
-            InputCheckerMove(sender);
-        }
-
-        private void square43_Click(object sender, EventArgs e)
-        {
-            InputCheckerMove(sender);
-        }
-
-        private void square44_Click(object sender, EventArgs e)
-        {
-            InputCheckerMove(sender);
-        }
-
-        private void square45_Click(object sender, EventArgs e)
-        {
-            InputCheckerMove(sender);
-        }
-
-        private void square46_Click(object sender, EventArgs e)
-        {
-            InputCheckerMove(sender);
-        }
-
-        private void square47_Click(object sender, EventArgs e)
-        {
-            InputCheckerMove(sender);
-        }
-
-        private void square48_Click(object sender, EventArgs e)
-        {
-            InputCheckerMove(sender);
-        }
-
-        private void square49_Click(object sender, EventArgs e)
-        {
-            InputCheckerMove(sender);
-        }
-
-        private void square50_Click(object sender, EventArgs e)
-        {
-            InputCheckerMove(sender);
-        }
-
-        private void square51_Click(object sender, EventArgs e)
-        {
-            InputCheckerMove(sender);
-        }
-
-        private void square52_Click(object sender, EventArgs e)
-        {
-            InputCheckerMove(sender);
-        }
-
-        private void square53_Click(object sender, EventArgs e)
-        {
-            InputCheckerMove(sender);
-        }
-
-        private void square54_Click(object sender, EventArgs e)
-        {
-            InputCheckerMove(sender);
-        }
-
-        private void square55_Click(object sender, EventArgs e)
-        {
-            InputCheckerMove(sender);
-        }
-
-        private void square56_Click(object sender, EventArgs e)
-        {
-            InputCheckerMove(sender);
-        }
-
-        private void square57_Click(object sender, EventArgs e)
-        {
-            InputCheckerMove(sender);
-        }
-
-        private void square58_Click(object sender, EventArgs e)
-        {
-            InputCheckerMove(sender);
-        }
-
-        private void square59_Click(object sender, EventArgs e)
-        {
-            InputCheckerMove(sender);
-        }
-
-        private void square60_Click(object sender, EventArgs e)
-        {
-            InputCheckerMove(sender);
-        }
-
-        private void square61_Click(object sender, EventArgs e)
-        {
-            InputCheckerMove(sender);
-        }
-
-        private void square62_Click(object sender, EventArgs e)
-        {
-            InputCheckerMove(sender);
-        }
-
-        private void square63_Click(object sender, EventArgs e)
-        {
-            InputCheckerMove(sender);
-        }
-
-        private void square64_Click(object sender, EventArgs e)
-        {
-            InputCheckerMove(sender);
-        }
-        #endregion
 
         /* InputCheckerMove allows user to enter a move. Highlights the selected square Cyan so user
          knows which square they are at. */
         public void InputCheckerMove(object sender)
         {
             Button btn = (Button)sender;
-            var grayTeam = btn.BackgroundImage.ToString().Contains("Gray");
-            // Check if square contains a piece
-            // If yes: Show the group box
-            // Else: display text that says you can't move anything from piece
-            if (!btn.BackgroundImage.ToString().Equals("checkerNone.png")) // Maybe will do this in initialize
+            if (!btn.Tag.Equals("none"))
             {
+                var grayTeam = btn.Tag.Equals("gray"); 
                 for (var r = 0; r < boardSize; r++)
                 {
                     for (var c = 0; c < boardSize; c++)
@@ -371,9 +122,12 @@ namespace CheckersGame
                         }
                     }
                 }
-                // Validate row and column
-                }
             }
+            else
+            {
+                // Choose a square that contains a piece
+            }
+        }
 
         /* BtnCancel_Click reverts color of the square and the number selectors if user wants to select different square */
         private void BtnCancel_Click(object sender, EventArgs e)
@@ -389,7 +143,6 @@ namespace CheckersGame
          */
         private void BtnMoveChecker_Click(object sender, EventArgs e)
         {
-            moveGroupBox.Visible = true;
             var destRow = int.Parse(selectRow.Text);
             var destCol = int.Parse(selectColumn.Text);
             //if (destRow == 0 || destCol == 8)
@@ -403,31 +156,50 @@ namespace CheckersGame
                 {
                     if (board[row, col].BackColor.Equals(Color.Cyan))
                     {
-                        bool grayTeam = board[row, col].BackgroundImage.ToString().Contains("Gray") ? true : false;
-                        MovePiece(board[destRow - 1, destCol - 1], grayTeam, board[row, col]);
-                        break;
+                        var originBtn = board[row, col];
+                        var destBtn = board[destRow - 1, destCol - 1]; 
+                        bool grayTeam = board[row, col].Tag.Equals("gray") ? true : false;
+                        if (ValidateMove(originBtn, destBtn))
+                        {
+                            MovePiece(board[destRow - 1, destCol - 1], grayTeam, board[row, col]);
+                            break;
+                        }
+                        else
+                        {
+                            txtInvalidMove.Text = "Invalid Move"; 
+                        }
+
                     }
                 }
             }
         }
 
         /* MovePiece is called by BtnMoveChecker_Click. This actually moves the pieces by changing images */
-        public void MovePiece(Button button, bool grayTeam, Button origin)
-        {            
-            if (grayTeam)
-            {
-                button.BackgroundImage = Properties.Resources.checkerGray;
-            }
-            else
-            {
-                button.BackgroundImage = Properties.Resources.checkerWhite;
-            }
-            button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+        public void MovePiece(Button destination, bool grayTeam, Button origin)
+        {
+            destination.Tag = origin.Tag;
+            destination.BackgroundImage = origin.Tag.Equals("gray") ? Properties.Resources.checkerGray : Properties.Resources.checkerWhite;
+            destination.BackgroundImageLayout = ImageLayout.Stretch;
             origin.BackgroundImage = Properties.Resources.checkerNone;
+            origin.Tag = "none"; 
+
+            //if (grayTeam)
+            //{
+            //    destination = origin; 
+            //}
+            //else
+            //{
+            //    destination.BackgroundImage = Properties.Resources.checkerWhite;
+            //}
             moveGroupBox.Visible = false;
             RevertColor(); 
         }
 
+        private bool ValidateMove(Button origin, Button destination)
+        {
+            return true; 
+        }
+        
         /* Revert color is a method that changes the color back to what it previously was (after a cancel or move)
          There is a bug here that needs to be fixed. */
         private void RevertColor()
@@ -451,5 +223,6 @@ namespace CheckersGame
                 }
             }
         }
+
     }
 }
