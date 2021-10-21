@@ -606,7 +606,7 @@ namespace CheckersGame
             this.btnMoveChecker.TabIndex = 69;
             this.btnMoveChecker.Text = "Move";
             this.btnMoveChecker.UseVisualStyleBackColor = true;
-            this.btnMoveChecker.Click += new System.EventHandler(this.btnMoveChecker_Click);
+            this.btnMoveChecker.Click += new System.EventHandler(this.BtnMoveChecker_Click);
             // 
             // moveGroupBox
             // 
@@ -623,7 +623,6 @@ namespace CheckersGame
             this.moveGroupBox.TabStop = false;
             this.moveGroupBox.Text = "Move Checker";
             this.moveGroupBox.Visible = false;
-            this.moveGroupBox.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // btnCancel
             // 
@@ -633,7 +632,7 @@ namespace CheckersGame
             this.btnCancel.TabIndex = 70;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = true;
-            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            this.btnCancel.Click += new System.EventHandler(this.BtnCancel_Click);
             // 
             // square62
             // 
