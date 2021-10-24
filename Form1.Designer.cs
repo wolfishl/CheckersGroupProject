@@ -101,10 +101,19 @@ namespace CheckersGame
             this.square3 = new System.Windows.Forms.Button();
             this.square2 = new System.Windows.Forms.Button();
             this.square1 = new System.Windows.Forms.Button();
-            this.debug = new System.Windows.Forms.Label();
+            this.levelGroupBox = new System.Windows.Forms.GroupBox();
+            this.lvlEasy = new System.Windows.Forms.RadioButton();
+            this.lvlMedium = new System.Windows.Forms.RadioButton();
+            this.lvlHard = new System.Windows.Forms.RadioButton();
+            this.playerGroupBox = new System.Windows.Forms.GroupBox();
+            this.radioYou = new System.Windows.Forms.RadioButton();
+            this.radioComputer = new System.Windows.Forms.RadioButton();
+            this.btnStart = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.selectRow)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.selectColumn)).BeginInit();
             this.moveGroupBox.SuspendLayout();
+            this.levelGroupBox.SuspendLayout();
+            this.playerGroupBox.SuspendLayout();
             this.SuspendLayout();
             // 
             // square4
@@ -582,7 +591,7 @@ namespace CheckersGame
             this.moveGroupBox.Controls.Add(this.selectColumn);
             this.moveGroupBox.Location = new System.Drawing.Point(666, 49);
             this.moveGroupBox.Name = "moveGroupBox";
-            this.moveGroupBox.Size = new System.Drawing.Size(200, 177);
+            this.moveGroupBox.Size = new System.Drawing.Size(200, 148);
             this.moveGroupBox.TabIndex = 70;
             this.moveGroupBox.TabStop = false;
             this.moveGroupBox.Text = "Move Checker";
@@ -610,7 +619,6 @@ namespace CheckersGame
             // square62
             // 
             this.square62.BackColor = System.Drawing.Color.Black;
-            this.square62.BackgroundImage = global::CheckersGame.Properties.Resources.checkerWhite;
             this.square62.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.square62.Location = new System.Drawing.Point(422, 559);
             this.square62.Name = "square62";
@@ -622,7 +630,6 @@ namespace CheckersGame
             // square60
             // 
             this.square60.BackColor = System.Drawing.Color.Black;
-            this.square60.BackgroundImage = global::CheckersGame.Properties.Resources.checkerWhite;
             this.square60.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.square60.Location = new System.Drawing.Point(276, 559);
             this.square60.Name = "square60";
@@ -634,7 +641,6 @@ namespace CheckersGame
             // square58
             // 
             this.square58.BackColor = System.Drawing.Color.Black;
-            this.square58.BackgroundImage = global::CheckersGame.Properties.Resources.checkerWhite;
             this.square58.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.square58.Location = new System.Drawing.Point(131, 559);
             this.square58.Name = "square58";
@@ -646,7 +652,6 @@ namespace CheckersGame
             // square64
             // 
             this.square64.BackColor = System.Drawing.Color.Black;
-            this.square64.BackgroundImage = global::CheckersGame.Properties.Resources.checkerWhite;
             this.square64.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.square64.Location = new System.Drawing.Point(568, 559);
             this.square64.Name = "square64";
@@ -658,7 +663,6 @@ namespace CheckersGame
             // square55
             // 
             this.square55.BackColor = System.Drawing.Color.Black;
-            this.square55.BackgroundImage = global::CheckersGame.Properties.Resources.checkerWhite;
             this.square55.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.square55.Location = new System.Drawing.Point(495, 486);
             this.square55.Name = "square55";
@@ -670,7 +674,6 @@ namespace CheckersGame
             // square53
             // 
             this.square53.BackColor = System.Drawing.Color.Black;
-            this.square53.BackgroundImage = global::CheckersGame.Properties.Resources.checkerWhite;
             this.square53.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.square53.Location = new System.Drawing.Point(349, 486);
             this.square53.Name = "square53";
@@ -682,7 +685,6 @@ namespace CheckersGame
             // square51
             // 
             this.square51.BackColor = System.Drawing.Color.Black;
-            this.square51.BackgroundImage = global::CheckersGame.Properties.Resources.checkerWhite;
             this.square51.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.square51.Location = new System.Drawing.Point(204, 486);
             this.square51.Name = "square51";
@@ -694,7 +696,6 @@ namespace CheckersGame
             // square49
             // 
             this.square49.BackColor = System.Drawing.Color.Black;
-            this.square49.BackgroundImage = global::CheckersGame.Properties.Resources.checkerWhite;
             this.square49.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.square49.Location = new System.Drawing.Point(58, 486);
             this.square49.Name = "square49";
@@ -706,7 +707,6 @@ namespace CheckersGame
             // square46
             // 
             this.square46.BackColor = System.Drawing.Color.Black;
-            this.square46.BackgroundImage = global::CheckersGame.Properties.Resources.checkerWhite;
             this.square46.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.square46.Location = new System.Drawing.Point(422, 414);
             this.square46.Name = "square46";
@@ -718,7 +718,6 @@ namespace CheckersGame
             // square44
             // 
             this.square44.BackColor = System.Drawing.Color.Black;
-            this.square44.BackgroundImage = global::CheckersGame.Properties.Resources.checkerWhite;
             this.square44.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.square44.Location = new System.Drawing.Point(276, 414);
             this.square44.Name = "square44";
@@ -730,7 +729,6 @@ namespace CheckersGame
             // square42
             // 
             this.square42.BackColor = System.Drawing.Color.Black;
-            this.square42.BackgroundImage = global::CheckersGame.Properties.Resources.checkerWhite;
             this.square42.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.square42.Location = new System.Drawing.Point(131, 414);
             this.square42.Name = "square42";
@@ -742,7 +740,6 @@ namespace CheckersGame
             // square48
             // 
             this.square48.BackColor = System.Drawing.Color.Black;
-            this.square48.BackgroundImage = global::CheckersGame.Properties.Resources.checkerWhite;
             this.square48.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.square48.Location = new System.Drawing.Point(568, 414);
             this.square48.Name = "square48";
@@ -754,7 +751,6 @@ namespace CheckersGame
             // square23
             // 
             this.square23.BackColor = System.Drawing.Color.Black;
-            this.square23.BackgroundImage = global::CheckersGame.Properties.Resources.checkerGray;
             this.square23.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.square23.Location = new System.Drawing.Point(495, 195);
             this.square23.Name = "square23";
@@ -766,7 +762,6 @@ namespace CheckersGame
             // square21
             // 
             this.square21.BackColor = System.Drawing.Color.Black;
-            this.square21.BackgroundImage = global::CheckersGame.Properties.Resources.checkerGray;
             this.square21.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.square21.Location = new System.Drawing.Point(349, 195);
             this.square21.Name = "square21";
@@ -778,7 +773,6 @@ namespace CheckersGame
             // square19
             // 
             this.square19.BackColor = System.Drawing.Color.Black;
-            this.square19.BackgroundImage = global::CheckersGame.Properties.Resources.checkerGray;
             this.square19.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.square19.Location = new System.Drawing.Point(204, 195);
             this.square19.Name = "square19";
@@ -790,7 +784,6 @@ namespace CheckersGame
             // square17
             // 
             this.square17.BackColor = System.Drawing.Color.Black;
-            this.square17.BackgroundImage = global::CheckersGame.Properties.Resources.checkerGray;
             this.square17.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.square17.Location = new System.Drawing.Point(58, 195);
             this.square17.Name = "square17";
@@ -802,7 +795,6 @@ namespace CheckersGame
             // square14
             // 
             this.square14.BackColor = System.Drawing.Color.Black;
-            this.square14.BackgroundImage = global::CheckersGame.Properties.Resources.checkerGray;
             this.square14.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.square14.Location = new System.Drawing.Point(422, 122);
             this.square14.Name = "square14";
@@ -814,7 +806,6 @@ namespace CheckersGame
             // square12
             // 
             this.square12.BackColor = System.Drawing.Color.Black;
-            this.square12.BackgroundImage = global::CheckersGame.Properties.Resources.checkerGray;
             this.square12.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.square12.Location = new System.Drawing.Point(276, 122);
             this.square12.Name = "square12";
@@ -826,7 +817,6 @@ namespace CheckersGame
             // square10
             // 
             this.square10.BackColor = System.Drawing.Color.Black;
-            this.square10.BackgroundImage = global::CheckersGame.Properties.Resources.checkerGray;
             this.square10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.square10.Location = new System.Drawing.Point(131, 122);
             this.square10.Name = "square10";
@@ -838,7 +828,6 @@ namespace CheckersGame
             // square16
             // 
             this.square16.BackColor = System.Drawing.Color.Black;
-            this.square16.BackgroundImage = global::CheckersGame.Properties.Resources.checkerGray;
             this.square16.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.square16.Location = new System.Drawing.Point(568, 122);
             this.square16.Name = "square16";
@@ -850,7 +839,6 @@ namespace CheckersGame
             // square7
             // 
             this.square7.BackColor = System.Drawing.Color.Black;
-            this.square7.BackgroundImage = global::CheckersGame.Properties.Resources.checkerGray;
             this.square7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.square7.Location = new System.Drawing.Point(495, 49);
             this.square7.Name = "square7";
@@ -862,7 +850,6 @@ namespace CheckersGame
             // square5
             // 
             this.square5.BackColor = System.Drawing.Color.Black;
-            this.square5.BackgroundImage = global::CheckersGame.Properties.Resources.checkerGray;
             this.square5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.square5.Location = new System.Drawing.Point(349, 49);
             this.square5.Name = "square5";
@@ -874,7 +861,6 @@ namespace CheckersGame
             // square3
             // 
             this.square3.BackColor = System.Drawing.Color.Black;
-            this.square3.BackgroundImage = global::CheckersGame.Properties.Resources.checkerGray;
             this.square3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.square3.Location = new System.Drawing.Point(204, 49);
             this.square3.Name = "square3";
@@ -897,7 +883,6 @@ namespace CheckersGame
             // square1
             // 
             this.square1.BackColor = System.Drawing.Color.Black;
-            this.square1.BackgroundImage = global::CheckersGame.Properties.Resources.checkerGray;
             this.square1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.square1.Location = new System.Drawing.Point(58, 49);
             this.square1.Name = "square1";
@@ -905,21 +890,104 @@ namespace CheckersGame
             this.square1.TabIndex = 0;
             this.square1.UseVisualStyleBackColor = false;
             // 
-            // debug
+            // levelGroupBox
             // 
-            this.debug.AutoSize = true;
-            this.debug.Location = new System.Drawing.Point(689, 362);
-            this.debug.Name = "debug";
-            this.debug.Size = new System.Drawing.Size(48, 17);
-            this.debug.TabIndex = 71;
-            this.debug.Text = "debug";
+            this.levelGroupBox.Controls.Add(this.lvlHard);
+            this.levelGroupBox.Controls.Add(this.lvlMedium);
+            this.levelGroupBox.Controls.Add(this.lvlEasy);
+            this.levelGroupBox.Location = new System.Drawing.Point(669, 215);
+            this.levelGroupBox.Name = "levelGroupBox";
+            this.levelGroupBox.Size = new System.Drawing.Size(137, 110);
+            this.levelGroupBox.TabIndex = 72;
+            this.levelGroupBox.TabStop = false;
+            this.levelGroupBox.Text = "Select Level";
+            // 
+            // lvlEasy
+            // 
+            this.lvlEasy.AutoSize = true;
+            this.lvlEasy.Checked = true;
+            this.lvlEasy.Location = new System.Drawing.Point(18, 21);
+            this.lvlEasy.Name = "lvlEasy";
+            this.lvlEasy.Size = new System.Drawing.Size(60, 21);
+            this.lvlEasy.TabIndex = 0;
+            this.lvlEasy.TabStop = true;
+            this.lvlEasy.Text = "Easy";
+            this.lvlEasy.UseVisualStyleBackColor = true;
+            // 
+            // lvlMedium
+            // 
+            this.lvlMedium.AutoSize = true;
+            this.lvlMedium.Location = new System.Drawing.Point(18, 48);
+            this.lvlMedium.Name = "lvlMedium";
+            this.lvlMedium.Size = new System.Drawing.Size(78, 21);
+            this.lvlMedium.TabIndex = 1;
+            this.lvlMedium.TabStop = true;
+            this.lvlMedium.Text = "Medium";
+            this.lvlMedium.UseVisualStyleBackColor = true;
+            // 
+            // lvlHard
+            // 
+            this.lvlHard.AutoSize = true;
+            this.lvlHard.Location = new System.Drawing.Point(18, 75);
+            this.lvlHard.Name = "lvlHard";
+            this.lvlHard.Size = new System.Drawing.Size(60, 21);
+            this.lvlHard.TabIndex = 2;
+            this.lvlHard.TabStop = true;
+            this.lvlHard.Text = "Hard";
+            this.lvlHard.UseVisualStyleBackColor = true;
+            // 
+            // playerGroupBox
+            // 
+            this.playerGroupBox.Controls.Add(this.radioComputer);
+            this.playerGroupBox.Controls.Add(this.radioYou);
+            this.playerGroupBox.Location = new System.Drawing.Point(808, 215);
+            this.playerGroupBox.Name = "playerGroupBox";
+            this.playerGroupBox.Size = new System.Drawing.Size(206, 110);
+            this.playerGroupBox.TabIndex = 73;
+            this.playerGroupBox.TabStop = false;
+            this.playerGroupBox.Text = "Select Starting Player";
+            // 
+            // radioYou
+            // 
+            this.radioYou.AutoSize = true;
+            this.radioYou.Checked = true;
+            this.radioYou.Location = new System.Drawing.Point(7, 22);
+            this.radioYou.Name = "radioYou";
+            this.radioYou.Size = new System.Drawing.Size(54, 21);
+            this.radioYou.TabIndex = 0;
+            this.radioYou.TabStop = true;
+            this.radioYou.Text = "You";
+            this.radioYou.UseVisualStyleBackColor = true;
+            // 
+            // radioComputer
+            // 
+            this.radioComputer.AutoSize = true;
+            this.radioComputer.Location = new System.Drawing.Point(7, 48);
+            this.radioComputer.Name = "radioComputer";
+            this.radioComputer.Size = new System.Drawing.Size(90, 21);
+            this.radioComputer.TabIndex = 1;
+            this.radioComputer.TabStop = true;
+            this.radioComputer.Text = "Computer";
+            this.radioComputer.UseVisualStyleBackColor = true;
+            // 
+            // btnStart
+            // 
+            this.btnStart.Location = new System.Drawing.Point(744, 341);
+            this.btnStart.Name = "btnStart";
+            this.btnStart.Size = new System.Drawing.Size(175, 42);
+            this.btnStart.TabIndex = 74;
+            this.btnStart.Text = "START";
+            this.btnStart.UseVisualStyleBackColor = true;
+            this.btnStart.Click += new System.EventHandler(this.btnStart_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(978, 694);
-            this.Controls.Add(this.debug);
+            this.ClientSize = new System.Drawing.Size(1026, 694);
+            this.Controls.Add(this.btnStart);
+            this.Controls.Add(this.playerGroupBox);
+            this.Controls.Add(this.levelGroupBox);
             this.Controls.Add(this.moveGroupBox);
             this.Controls.Add(this.square63);
             this.Controls.Add(this.square62);
@@ -991,8 +1059,11 @@ namespace CheckersGame
             ((System.ComponentModel.ISupportInitialize)(this.selectColumn)).EndInit();
             this.moveGroupBox.ResumeLayout(false);
             this.moveGroupBox.PerformLayout();
+            this.levelGroupBox.ResumeLayout(false);
+            this.levelGroupBox.PerformLayout();
+            this.playerGroupBox.ResumeLayout(false);
+            this.playerGroupBox.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -1070,7 +1141,14 @@ namespace CheckersGame
         private System.Windows.Forms.GroupBox moveGroupBox;
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.Label txtInvalidMove;
-        private System.Windows.Forms.Label debug;
+        private System.Windows.Forms.GroupBox levelGroupBox;
+        private System.Windows.Forms.RadioButton lvlHard;
+        private System.Windows.Forms.RadioButton lvlMedium;
+        private System.Windows.Forms.RadioButton lvlEasy;
+        private System.Windows.Forms.GroupBox playerGroupBox;
+        private System.Windows.Forms.RadioButton radioComputer;
+        private System.Windows.Forms.RadioButton radioYou;
+        private System.Windows.Forms.Button btnStart;
     }
 }
 
