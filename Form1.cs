@@ -23,9 +23,15 @@ namespace CheckersGame
                 { square49, square50, square51, square52, square53, square54, square55, square56},
                 { square57, square58, square59, square60, square61, square62, square63, square64} 
             };
+        }
+        private void btnStart_Click(object sender, EventArgs e)
+        {
             InitializeNoneCheckers();
-            InitializeGrayCheckers();
-            InitializeWhiteCheckers();
+            InitializeBoard(); 
+            playerGroupBox.Visible = false;
+            levelGroupBox.Visible = false; 
+            var startBtn = (Button)sender;
+            startBtn.Visible = false;
         }
 
         private void InitializeNoneCheckers()
@@ -37,63 +43,76 @@ namespace CheckersGame
             }
         }
 
-        private void InitializeWhiteCheckers()
+        private void InitializeBoard()
         {
-            board[5, 1].BackgroundImage = Properties.Resources.checkerWhite;
-            board[5, 3].BackgroundImage = Properties.Resources.checkerWhite;
-            board[5, 5].BackgroundImage = Properties.Resources.checkerWhite;
-            board[5, 7].BackgroundImage = Properties.Resources.checkerWhite;
-            board[6, 0].BackgroundImage = Properties.Resources.checkerWhite;
-            board[6, 2].BackgroundImage = Properties.Resources.checkerWhite;
-            board[6, 4].BackgroundImage = Properties.Resources.checkerWhite;
-            board[6, 6].BackgroundImage = Properties.Resources.checkerWhite;
-            board[7, 1].BackgroundImage = Properties.Resources.checkerWhite;
-            board[7, 3].BackgroundImage = Properties.Resources.checkerWhite;
-            board[7, 5].BackgroundImage = Properties.Resources.checkerWhite;
-            board[7, 7].BackgroundImage = Properties.Resources.checkerWhite;
-
-            board[5, 1].Tag = "white"; 
-            board[5, 3].Tag = "white";
-            board[5, 5].Tag = "white";
-            board[5, 7].Tag = "white";
-            board[6, 0].Tag = "white";
-            board[6, 2].Tag = "white";
-            board[6, 4].Tag = "white";
-            board[6, 6].Tag = "white";
-            board[7, 1].Tag = "white";
-            board[7, 3].Tag = "white";
-            board[7, 5].Tag = "white";
-            board[7, 7].Tag = "white";
+            if (radioYou.Checked)
+            {
+                InitializeTop(Properties.Resources.checkerGray, "gray");
+                InitializeBottom(Properties.Resources.checkerWhite, "white"); 
+            } else
+            {
+                InitializeTop(Properties.Resources.checkerWhite, "white");
+                InitializeBottom(Properties.Resources.checkerGray, "gray"); 
+            }
         }
 
-        private void InitializeGrayCheckers()
+        private void InitializeTop(Bitmap checker, string color)
         {
-            board[0, 0].BackgroundImage = Properties.Resources.checkerGray;
-            board[0, 2].BackgroundImage = Properties.Resources.checkerGray;
-            board[0, 4].BackgroundImage = Properties.Resources.checkerGray;
-            board[0, 6].BackgroundImage = Properties.Resources.checkerGray;
-            board[1, 1].BackgroundImage = Properties.Resources.checkerGray;
-            board[1, 3].BackgroundImage = Properties.Resources.checkerGray;
-            board[1, 5].BackgroundImage = Properties.Resources.checkerGray;
-            board[1, 7].BackgroundImage = Properties.Resources.checkerGray;
-            board[2, 0].BackgroundImage = Properties.Resources.checkerGray;
-            board[2, 2].BackgroundImage = Properties.Resources.checkerGray;
-            board[2, 4].BackgroundImage = Properties.Resources.checkerGray;
-            board[2, 6].BackgroundImage = Properties.Resources.checkerGray;            
-            
-            board[0, 0].Tag = "gray";
-            board[0, 2].Tag = "gray";
-            board[0, 4].Tag = "gray";
-            board[0, 6].Tag = "gray";
-            board[1, 1].Tag = "gray";
-            board[1, 3].Tag = "gray";
-            board[1, 5].Tag = "gray";
-            board[1, 7].Tag = "gray";
-            board[2, 0].Tag = "gray";
-            board[2, 2].Tag = "gray";
-            board[2, 4].Tag = "gray";
-            board[2, 6].Tag = "gray";
+            board[0, 0].BackgroundImage = checker;
+            board[0, 2].BackgroundImage = checker;
+            board[0, 4].BackgroundImage = checker;
+            board[0, 6].BackgroundImage = checker;
+            board[1, 1].BackgroundImage = checker;
+            board[1, 3].BackgroundImage = checker;
+            board[1, 5].BackgroundImage = checker;
+            board[1, 7].BackgroundImage = checker;
+            board[2, 0].BackgroundImage = checker;
+            board[2, 2].BackgroundImage = checker;
+            board[2, 4].BackgroundImage = checker;
+            board[2, 6].BackgroundImage = checker;
+
+            board[0, 0].Tag = color; 
+            board[0, 2].Tag = color;
+            board[0, 4].Tag = color;
+            board[0, 6].Tag = color;
+            board[1, 1].Tag = color;
+            board[1, 3].Tag = color;
+            board[1, 5].Tag = color;
+            board[1, 7].Tag = color;
+            board[2, 0].Tag = color;
+            board[2, 2].Tag = color;
+            board[2, 4].Tag = color;
+            board[2, 6].Tag = color;
         }
+
+        private void InitializeBottom(Bitmap checker, string color)
+        {
+            board[5, 1].BackgroundImage = checker;
+            board[5, 3].BackgroundImage = checker;
+            board[5, 5].BackgroundImage = checker;
+            board[5, 7].BackgroundImage = checker;
+            board[6, 0].BackgroundImage = checker; 
+            board[6, 2].BackgroundImage = checker;
+            board[6, 4].BackgroundImage = checker;
+            board[6, 6].BackgroundImage = checker;
+            board[7, 1].BackgroundImage = checker;
+            board[7, 3].BackgroundImage = checker;
+            board[7, 5].BackgroundImage = checker;
+            board[7, 7].BackgroundImage = checker;
+
+            board[5, 1].Tag = color;
+            board[5, 3].Tag = color; 
+            board[5, 5].Tag = color;
+            board[5, 7].Tag = color;
+            board[6, 0].Tag = color;
+            board[6, 2].Tag = color;
+            board[6, 4].Tag = color;
+            board[6, 6].Tag = color;
+            board[7, 1].Tag = color;
+            board[7, 3].Tag = color;
+            board[7, 5].Tag = color;
+            board[7, 7].Tag = color;
+        }    
 
         /* OnClickMethod for each square calls InputCheckerMove */
         private void SquareOnClick(object sender, EventArgs e)
@@ -149,7 +168,7 @@ namespace CheckersGame
             //{
             //    btn.Text = "king"; // Why? 
             //}
-
+            
             for (var row = 0; row < boardSize; row++)
             {
                 for (var col = 0; col < boardSize; col++)
@@ -162,6 +181,8 @@ namespace CheckersGame
                         if (ValidateMove(originBtn, destBtn))
                         {
                             MovePiece(board[destRow - 1, destCol - 1], grayTeam, board[row, col]);
+                            selectRow.Value = 1;
+                            selectColumn.Value = 1;
                             break;
                         }
                         else
@@ -182,15 +203,6 @@ namespace CheckersGame
             destination.BackgroundImageLayout = ImageLayout.Stretch;
             origin.BackgroundImage = Properties.Resources.checkerNone;
             origin.Tag = "none"; 
-
-            //if (grayTeam)
-            //{
-            //    destination = origin; 
-            //}
-            //else
-            //{
-            //    destination.BackgroundImage = Properties.Resources.checkerWhite;
-            //}
             moveGroupBox.Visible = false;
             RevertColor(); 
         }
@@ -223,6 +235,7 @@ namespace CheckersGame
                 }
             }
         }
+
 
     }
 }
