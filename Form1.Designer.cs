@@ -102,12 +102,12 @@ namespace CheckersGame
             this.square2 = new System.Windows.Forms.Button();
             this.square1 = new System.Windows.Forms.Button();
             this.levelGroupBox = new System.Windows.Forms.GroupBox();
-            this.lvlEasy = new System.Windows.Forms.RadioButton();
-            this.lvlMedium = new System.Windows.Forms.RadioButton();
             this.lvlHard = new System.Windows.Forms.RadioButton();
+            this.lvlMedium = new System.Windows.Forms.RadioButton();
+            this.lvlEasy = new System.Windows.Forms.RadioButton();
             this.playerGroupBox = new System.Windows.Forms.GroupBox();
-            this.radioYou = new System.Windows.Forms.RadioButton();
             this.radioComputer = new System.Windows.Forms.RadioButton();
+            this.radioYou = new System.Windows.Forms.RadioButton();
             this.btnStart = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.selectRow)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.selectColumn)).BeginInit();
@@ -902,17 +902,16 @@ namespace CheckersGame
             this.levelGroupBox.TabStop = false;
             this.levelGroupBox.Text = "Select Level";
             // 
-            // lvlEasy
+            // lvlHard
             // 
-            this.lvlEasy.AutoSize = true;
-            this.lvlEasy.Checked = true;
-            this.lvlEasy.Location = new System.Drawing.Point(18, 21);
-            this.lvlEasy.Name = "lvlEasy";
-            this.lvlEasy.Size = new System.Drawing.Size(60, 21);
-            this.lvlEasy.TabIndex = 0;
-            this.lvlEasy.TabStop = true;
-            this.lvlEasy.Text = "Easy";
-            this.lvlEasy.UseVisualStyleBackColor = true;
+            this.lvlHard.AutoSize = true;
+            this.lvlHard.Location = new System.Drawing.Point(18, 75);
+            this.lvlHard.Name = "lvlHard";
+            this.lvlHard.Size = new System.Drawing.Size(60, 21);
+            this.lvlHard.TabIndex = 2;
+            this.lvlHard.TabStop = true;
+            this.lvlHard.Text = "Hard";
+            this.lvlHard.UseVisualStyleBackColor = true;
             // 
             // lvlMedium
             // 
@@ -925,16 +924,17 @@ namespace CheckersGame
             this.lvlMedium.Text = "Medium";
             this.lvlMedium.UseVisualStyleBackColor = true;
             // 
-            // lvlHard
+            // lvlEasy
             // 
-            this.lvlHard.AutoSize = true;
-            this.lvlHard.Location = new System.Drawing.Point(18, 75);
-            this.lvlHard.Name = "lvlHard";
-            this.lvlHard.Size = new System.Drawing.Size(60, 21);
-            this.lvlHard.TabIndex = 2;
-            this.lvlHard.TabStop = true;
-            this.lvlHard.Text = "Hard";
-            this.lvlHard.UseVisualStyleBackColor = true;
+            this.lvlEasy.AutoSize = true;
+            this.lvlEasy.Checked = true;
+            this.lvlEasy.Location = new System.Drawing.Point(18, 21);
+            this.lvlEasy.Name = "lvlEasy";
+            this.lvlEasy.Size = new System.Drawing.Size(60, 21);
+            this.lvlEasy.TabIndex = 0;
+            this.lvlEasy.TabStop = true;
+            this.lvlEasy.Text = "Easy";
+            this.lvlEasy.UseVisualStyleBackColor = true;
             // 
             // playerGroupBox
             // 
@@ -947,6 +947,17 @@ namespace CheckersGame
             this.playerGroupBox.TabStop = false;
             this.playerGroupBox.Text = "Select Starting Player";
             // 
+            // radioComputer
+            // 
+            this.radioComputer.AutoSize = true;
+            this.radioComputer.Location = new System.Drawing.Point(7, 48);
+            this.radioComputer.Name = "radioComputer";
+            this.radioComputer.Size = new System.Drawing.Size(90, 21);
+            this.radioComputer.TabIndex = 1;
+            this.radioComputer.TabStop = true;
+            this.radioComputer.Text = "Computer";
+            this.radioComputer.UseVisualStyleBackColor = true;
+            // 
             // radioYou
             // 
             this.radioYou.AutoSize = true;
@@ -958,17 +969,6 @@ namespace CheckersGame
             this.radioYou.TabStop = true;
             this.radioYou.Text = "You";
             this.radioYou.UseVisualStyleBackColor = true;
-            // 
-            // radioComputer
-            // 
-            this.radioComputer.AutoSize = true;
-            this.radioComputer.Location = new System.Drawing.Point(7, 48);
-            this.radioComputer.Name = "radioComputer";
-            this.radioComputer.Size = new System.Drawing.Size(90, 21);
-            this.radioComputer.TabIndex = 1;
-            this.radioComputer.TabStop = true;
-            this.radioComputer.Text = "Computer";
-            this.radioComputer.UseVisualStyleBackColor = true;
             // 
             // btnStart
             // 
@@ -1054,7 +1054,7 @@ namespace CheckersGame
             this.Controls.Add(this.square2);
             this.Controls.Add(this.square1);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Checkers Game";
             ((System.ComponentModel.ISupportInitialize)(this.selectRow)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.selectColumn)).EndInit();
             this.moveGroupBox.ResumeLayout(false);

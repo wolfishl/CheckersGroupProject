@@ -58,60 +58,37 @@ namespace CheckersGame
 
         private void InitializeTop(Bitmap checker, string color)
         {
-            board[0, 0].BackgroundImage = checker;
-            board[0, 2].BackgroundImage = checker;
-            board[0, 4].BackgroundImage = checker;
-            board[0, 6].BackgroundImage = checker;
-            board[1, 1].BackgroundImage = checker;
-            board[1, 3].BackgroundImage = checker;
-            board[1, 5].BackgroundImage = checker;
-            board[1, 7].BackgroundImage = checker;
-            board[2, 0].BackgroundImage = checker;
-            board[2, 2].BackgroundImage = checker;
-            board[2, 4].BackgroundImage = checker;
-            board[2, 6].BackgroundImage = checker;
-
-            board[0, 0].Tag = color; 
-            board[0, 2].Tag = color;
-            board[0, 4].Tag = color;
-            board[0, 6].Tag = color;
-            board[1, 1].Tag = color;
-            board[1, 3].Tag = color;
-            board[1, 5].Tag = color;
-            board[1, 7].Tag = color;
-            board[2, 0].Tag = color;
-            board[2, 2].Tag = color;
-            board[2, 4].Tag = color;
-            board[2, 6].Tag = color;
+            int lastColumn = 2;
+            int boardSize = 8;
+            for (int col = 0; col <= lastColumn; col++)
+            {
+                for (int row = 0; row < boardSize; row++)
+                {
+                    if ((col + row) % 2 == 0)
+                    {
+                        board[col, row].BackgroundImage = checker;
+                        board[col, row].Tag = color;
+                    }
+                }
+            }
         }
 
         private void InitializeBottom(Bitmap checker, string color)
         {
-            board[5, 1].BackgroundImage = checker;
-            board[5, 3].BackgroundImage = checker;
-            board[5, 5].BackgroundImage = checker;
-            board[5, 7].BackgroundImage = checker;
-            board[6, 0].BackgroundImage = checker; 
-            board[6, 2].BackgroundImage = checker;
-            board[6, 4].BackgroundImage = checker;
-            board[6, 6].BackgroundImage = checker;
-            board[7, 1].BackgroundImage = checker;
-            board[7, 3].BackgroundImage = checker;
-            board[7, 5].BackgroundImage = checker;
-            board[7, 7].BackgroundImage = checker;
 
-            board[5, 1].Tag = color;
-            board[5, 3].Tag = color; 
-            board[5, 5].Tag = color;
-            board[5, 7].Tag = color;
-            board[6, 0].Tag = color;
-            board[6, 2].Tag = color;
-            board[6, 4].Tag = color;
-            board[6, 6].Tag = color;
-            board[7, 1].Tag = color;
-            board[7, 3].Tag = color;
-            board[7, 5].Tag = color;
-            board[7, 7].Tag = color;
+            int startingColumn = 5;
+            int boardSize = 8;
+            for (int col = startingColumn; col < boardSize; col++)
+            {
+                for (int row = 0; row < boardSize; row++)
+                {
+                    if ((col + row) % 2 == 0)
+                    {
+                        board[col, row].BackgroundImage = checker;
+                        board[col, row].Tag = color;
+                    }
+                }
+            }
         }    
 
         /* OnClickMethod for each square calls InputCheckerMove */
