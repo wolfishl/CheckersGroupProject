@@ -47,12 +47,12 @@ namespace CheckersGame
         {
             if (radioYou.Checked)
             {
-                InitializeTop(Properties.Resources.checkerGray, "gray");
-                InitializeBottom(Properties.Resources.checkerWhite, "white"); 
+                InitializeTop(Properties.Resources.checkerGray, "white");
+                InitializeBottom(Properties.Resources.checkerWhite, "gray"); 
             } else
             {
-                InitializeTop(Properties.Resources.checkerWhite, "white");
-                InitializeBottom(Properties.Resources.checkerGray, "gray"); 
+                InitializeTop(Properties.Resources.checkerWhite, "gray");
+                InitializeBottom(Properties.Resources.checkerGray, "white"); 
             }
         }
 
