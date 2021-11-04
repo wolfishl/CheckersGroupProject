@@ -13,15 +13,16 @@ namespace CheckersGame
         {
             this.board = board;
         }
+
+
+        /*
+         * calculates and returns a heuristic value for the current board
+         */
         internal double heuristicValue()
         {
             throw new NotImplementedException();
         }
        
-        internal bool isEmpty()
-        {
-            throw new NotImplementedException();
-        }
 
         /*
          * returns a boolean that is true if the specified player can move on that piece

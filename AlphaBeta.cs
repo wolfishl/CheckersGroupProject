@@ -19,11 +19,6 @@ namespace CheckersGame
             {
                 value = board.heuristicValue();
             }
-            //change this for checkers
-            else if (board.isEmpty())
-            {
-                value = board.heuristicValue();
-            }
             else
             {
                 Player opponent = player == Player.MAX ? Player.MIN : Player.MAX;

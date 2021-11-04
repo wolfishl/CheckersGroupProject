@@ -1,6 +1,9 @@
 ﻿namespace CheckersGame
 {
-    public class Player
-    {
-    }
+   
+        public enum Player
+        {
+            MAX, MIN
+        }
+   
 }
