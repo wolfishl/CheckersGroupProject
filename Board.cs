@@ -38,7 +38,7 @@ namespace CheckersGame
          * returns a list of boards for every possible next move
          * will call canMove
          */
-        internal Board[] allMoves()
+        internal Board[] allMoves(Player player)
         {
             throw new NotImplementedException();
         }
