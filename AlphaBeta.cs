@@ -25,27 +25,19 @@ namespace CheckersGame
 
                 if (player == Player.MAX)
                 {
-                    for (int col = 0; col < Board.SIZE; ++col)
+                    foreach(Board nextPos in board.allMoves())
                     {
-                        for (int row = 0; row < Board.SIZE; ++row)
+                        double thisVal = Value(nextPos, depth - 1, alfa, beta, opponent);
+                        if (thisVal > alfa)
                         {
-                            if (board.canMove(Player.MAX, col, row))
-                            {
-                                foreach (Board nextPos in board.MakeMove(Player.MAX, col, row))
-                                { 
-                                    double thisVal = Value(nextPos, depth - 1, alfa, beta, opponent);
-                                    if (thisVal > alfa)
-                                    {
-                                        alfa = thisVal;
-                                    }
-                                    if (beta <= alfa)
-                                    {
-                                        break;
-                                    }
-                                }
-                            }
+                            alfa = thisVal;
+                        }
+                        if (beta <= alfa)
+                        {
+                            break;
                         }
                     }
+                    
                     value = alfa;
                 }
                 else  // player == Player.MIN

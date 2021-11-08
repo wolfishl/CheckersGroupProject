@@ -33,6 +33,17 @@ namespace CheckersGame
             throw new NotImplementedException();
         }
 
+
+        /*
+         * returns a list of boards for every possible next move
+         * will call canMove
+         */
+        internal Board[] allMoves()
+        {
+            throw new NotImplementedException();
+        }
+
+
         /*
          * returns a list of possible moves for the piece specified in that column
          */
