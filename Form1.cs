@@ -94,7 +94,7 @@ namespace CheckersGame
         /* OnClickMethod for each square calls InputCheckerMove */
         private void SquareOnClick(object sender, EventArgs e)
         {
-            InputCheckerMove(sender);
+            // InputCheckerMove(sender);
         }
 
 
@@ -102,7 +102,7 @@ namespace CheckersGame
          knows which square they are at. */
         public void InputCheckerMove(object sender)
         {
-            Button btn = (Button)sender;
+            /*Button btn = (Button)sender;
             if (!btn.Tag.Equals("none"))
             {
                 var grayTeam = btn.Tag.Equals("gray"); 
@@ -122,7 +122,7 @@ namespace CheckersGame
             else
             {
                 // Choose a square that contains a piece
-            }
+            }*/
         }
 
         /* BtnCancel_Click reverts color of the square and the number selectors if user wants to select different square */
