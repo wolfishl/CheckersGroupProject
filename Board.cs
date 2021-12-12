@@ -17,10 +17,28 @@ namespace CheckersGame
 
         /*
          * calculates and returns a heuristic value for the current board
+         * POsitive value means white is winning, negative is gray is winning
          */
         internal double heuristicValue()
         {
-            throw new NotImplementedException();
+            int whitePieces = 0;
+            int grayPieces = 0;
+            for (int col = 0; col < SIZE; col++)
+            {
+                for (int row = 0; row < SIZE; row++)
+                {
+                    String squareStatus = board[col, row].Tag;
+                    if (squareStatus == "white")
+                    {
+                        whitePieces++;
+                    }
+                    else if(squareStatus == "gray")
+                    {
+                        grayPieces++;
+                    }
+                }
+            }
+            return whitePieces - grayPieces;
         }
 
 
