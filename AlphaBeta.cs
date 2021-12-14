@@ -25,7 +25,7 @@ namespace CheckersGame
 
                 if (player == Player.MAX)
                 {
-                    foreach (Board nextPos in board.allMoves(player))
+                    foreach (Board nextPos in board.getAllMoves(player))
                     {
                         double thisVal = Value(nextPos, depth - 1, alfa, beta, opponent);
                         if (thisVal > alfa)
@@ -42,7 +42,7 @@ namespace CheckersGame
                 }
                 else  // player == Player.MIN
                 {
-                    foreach (Board nextPos in board.allMoves(player))
+                    foreach (Board nextPos in board.getAllMoves(player))
                     {
                         double thisVal = Value(nextPos, depth - 1, alfa, beta, opponent);
                         if (thisVal < beta)
